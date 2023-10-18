@@ -51,7 +51,7 @@ signed main(){
     while(t--){
       int l,r;
       cin>>l>>r;
-      cout<<upper_bound(v.begin(),v.end(),r)-lower_bound(v.begin(),v.end(),l)<<endl;
+      cout<<lower_bound(v.begin(),v.end(),r)-upper_bound(v.begin(),v.end(),l)<<endl;
     }
 
     return 0;

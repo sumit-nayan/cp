@@ -4,23 +4,30 @@ using namespace std;
 
 int bs(vector<int>& v,int n, int x){
     if(x<v[0]){
-        return 0;
+        return 1;
+    }
+    if(x>v[n-1]){
+        return n+1;
     }
     int l=0,r=n-1;
     int mid;
     while(l<=r){
         mid = l + (r-l)/2;
-        if(v[mid]>x){
+        if(v[mid]>=x){
             r = mid-1;
         }else{
             l = mid+1;
         }
     }
     
-    return l;
+    return l+1;
 
 }
-// 0 2 4 0 5
+// 1
+// 3
+// 4
+// 1
+// 6
 void solution(){
     int n,k;
     cin>>n>>k;
