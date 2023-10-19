@@ -51,7 +51,14 @@ signed main(){
     while(t--){
       int l,r;
       cin>>l>>r;
-      cout<<lower_bound(v.begin(),v.end(),r)-upper_bound(v.begin(),v.end(),l)<<endl;
+      auto i = lower_bound(v.begin(),v.end(),l)-v.begin();
+    //   if(i==v.end()){
+    //     i=0;
+    //   }else{
+    //     i = i - v.begin()+1;
+    //   }
+      int j = upper_bound(v.begin(),v.end(),r)-v.begin();
+      cout<<j-i<<endl;
     }
 
     return 0;
