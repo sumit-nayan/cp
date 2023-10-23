@@ -10,6 +10,10 @@ bool predicate_fn(int t){
 signed main(){
     cin.tie(nullptr)->sync_with_stdio(false);
     cin>>n>>x>>y;
+    if(n==1){
+      cout<<min(x,y);
+      return 0;
+    }
     // for(int i=1;i<=10;i++){
     //   cout<<predicate_fn(i)<<endl;
     // }
